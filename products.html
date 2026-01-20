@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/be1ba39dfe.js"></script>
+    <link rel="stylesheet" href="./css/product_style.css">
+    <title>Products - Turning Pages</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="logo">📚 Turning Pages</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-right" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="login.html" class="login-link" id="authLink">Login</a></li>
+            <li><a href="#" class="cart-link" onclick="openCart(event)">
+                <i class="fa fa-shopping-cart"></i>
+                <span id="cartCount" class="cart-count">0</span>
+            </a></li>
+        </div>
+    </nav>
+
+    <div class="products-container">
+        <div class="filters-section">
+            <div class="filter-card">
+                <h3>Categories</h3>
+                <div class="filter-options">
+                    <label>
+                        <input type="checkbox" class="category-filter" value="Adventure" onchange="filterProducts()">
+                        Adventure
+                    </label>
+                    <label>
+                        <input type="checkbox" class="category-filter" value="Thriller" onchange="filterProducts()">
+                        Thriller
+                    </label>
+                    <label>
+                        <input type="checkbox" class="category-filter" value="Romantic" onchange="filterProducts()">
+                        Romantic
+                    </label>
+                    <label>
+                        <input type="checkbox" class="category-filter" value="Comedy" onchange="filterProducts()">
+                        Comedy
+                    </label>
+                </div>
+            </div>
+
+            <div class="filter-card">
+                <h3>Price Range</h3>
+                <div class="filter-options">
+                    <label>
+                        <input type="radio" name="price" value="0-150" onchange="filterProducts()">
+                        $0 - $150
+                    </label>
+                    <label>
+                        <input type="radio" name="price" value="150-250" onchange="filterProducts()">
+                        $150 - $250
+                    </label>
+                    <label>
+                        <input type="radio" name="price" value="250-400" onchange="filterProducts()">
+                        $250 - $400
+                    </label>
+                    <label>
+                        <input type="radio" name="price" value="400+" onchange="filterProducts()">
+                        $400+
+                    </label>
+                </div>
+            </div>
+
+            <div class="filter-card">
+                <h3>Sort By</h3>
+                <select id="sortSelect" onchange="sortProducts()" class="sort-select">
+                    <option value="">Default</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                    <option value="rating">Rating: High to Low</option>
+                </select>
+            </div>
+
+            <button onclick="clearFilters()" class="clear-btn">Clear Filters</button>
+        </div>
+
+        <div class="products-section">
+            <div class="products-header">
+                <h2>Our Books</h2>
+                <p id="productCount">Showing 20 books</p>
+            </div>
+
+            <div class="gallery" id="productsGallery">
+                <!-- Products loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Shopping Cart</h2>
+            <div id="cartItems"></div>
+            <div class="cart-summary">
+                <h3>Total: $<span id="cartTotal">0</span></h3>
+                <button class="btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+                <button class="btn-secondary" onclick="closeCart()">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Turning Pages is your go-to platform for discovering and purchasing books online.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="About.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@turningpages.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Turning Pages. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/products.js"></script>
+    <script src="./js/cart.js"></script>
+</body>
+</html>

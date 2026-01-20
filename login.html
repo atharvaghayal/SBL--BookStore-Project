@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/be1ba39dfe.js"></script>
+    <link rel="stylesheet" href="./css/login.css">
+    <title>Login - Turning Pages</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="logo">📚 Turning Pages</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-right" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="login.html" class="login-link">Login</a></li>
+            <li><a href="Register.html">Register</a></li>
+        </div>
+    </nav>
+
+    <div class="login-page">
+        <div class="form-container">
+            <div class="form-box">
+                <div class="login-header">
+                    <h3>LOGIN</h3>
+                    <p>Please enter your credentials to login.</p>
+                </div>
+                <form class="login-form" onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" placeholder="Enter your username" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password" required/>
+                    </div>
+                    <button type="submit" class="btn-login">Login</button>
+                </form>
+                <p class="message">Don't have an account? <a href="Register.html">Create one</a></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Turning Pages is your go-to platform for discovering and purchasing books online.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="About.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@turningpages.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Turning Pages. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/be1ba39dfe.js"></script>
+    <link rel="stylesheet" href="./css/about.css">
+    <title>About - Turning Pages</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="logo">📚 Turning Pages</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-right" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="login.html" class="login-link" id="authLink">Login</a></li>
+            <li><a href="#" class="cart-link" onclick="openCart(event)">
+                <i class="fa fa-shopping-cart"></i>
+                <span id="cartCount" class="cart-count">0</span>
+            </a></li>
+        </div>
+    </nav>
+
+    <div class="about-section">
+        <h1>About Turning Pages</h1>
+        <p>Your Gateway to a World of Books</p>
+    </div>
+
+    <div class="about-content">
+        <div class="about-intro">
+            <h2>Who We Are</h2>
+            <p>Turning Pages is a premier online bookstore dedicated to providing readers with access to an extensive collection of books across all genres. Since our inception, we have been committed to making quality literature accessible, affordable, and convenient for everyone.</p>
+            <p>Our mission is to inspire a love for reading and connect book lovers with their next favorite story. We believe in the power of books to transform lives and expand horizons.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-box">
+                <i class="fa fa-book"></i>
+                <h3>Vast Collection</h3>
+                <p>Explore thousands of books across multiple genres including fiction, non-fiction, mystery, romance, and more.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fa fa-truck"></i>
+                <h3>Fast Delivery</h3>
+                <p>Enjoy multiple delivery options - from standard shipping to overnight delivery, right to your doorstep.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fa fa-shield"></i>
+                <h3>Secure Shopping</h3>
+                <p>Shop with confidence using our encrypted and secure payment systems to protect your personal information.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fa fa-headphones"></i>
+                <h3>24/7 Support</h3>
+                <p>Our dedicated customer support team is always ready to assist you with any questions or concerns.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="team-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="member-image">
+                    <img src="./images/p1.jfif" alt="Team Member">
+                </div>
+                <div class="member-info">
+                    <h3>Atharva Ghayal</h3>
+                    <p class="role">Founder & CEO</p>
+                    <p class="quote">"Patience is the key to success."</p>
+                    <p class="contact"><i class="fa fa-envelope"></i> atharva@turningpages.com</p>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="member-image">
+                    <img src="./images/p2.jfif" alt="Team Member">
+                </div>
+                <div class="member-info">
+                    <h3>Arihant Kamble</h3>
+                    <p class="role">Creative Director</p>
+                    <p class="quote">"Excellence in every design choice."</p>
+                    <p class="contact"><i class="fa fa-envelope"></i> arihant@turningpages.com</p>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="member-image">
+                    <img src="./images/p3.jfif" alt="Team Member">
+                </div>
+                <div class="member-info">
+                    <h3>Himanshu Jain</h3>
+                    <p class="role">Lead Developer</p>
+                    <p class="quote">"Building digital experiences that matter."</p>
+                    <p class="contact"><i class="fa fa-envelope"></i> himanshu@turningpages.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Shopping Cart</h2>
+            <div id="cartItems"></div>
+            <div class="cart-summary">
+                <h3>Total: $<span id="cartTotal">0</span></h3>
+                <button class="btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+                <button class="btn-secondary" onclick="closeCart()">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Turning Pages is your go-to platform for discovering and purchasing books online.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="About.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@turningpages.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Turning Pages. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/cart.js"></script>
+</body>
+</html>

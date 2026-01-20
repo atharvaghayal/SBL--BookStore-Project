@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/be1ba39dfe.js"></script>
+    <link rel="stylesheet" href="./css/checkout.css">
+    <title>Checkout - Turning Pages</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="logo">📚 Turning Pages</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-right" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="login.html" class="login-link" id="authLink">Login</a></li>
+        </div>
+    </nav>
+
+    <div class="checkout-container">
+        <div class="checkout-header">
+            <h1>Checkout</h1>
+            <p>Complete your order</p>
+        </div>
+
+        <div class="checkout-content">
+            <div class="checkout-form">
+                <div class="form-section">
+                    <h2>Shipping Information</h2>
+                    <form id="checkoutForm" onsubmit="handleCheckout(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Street Address</label>
+                            <input type="text" id="address" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="state">State</label>
+                                <input type="text" id="state" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="zip">ZIP Code</label>
+                                <input type="text" id="zip" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <input type="text" id="country" required>
+                        </div>
+
+                        <div class="form-section" style="margin-top: 30px;">
+                            <h2>Delivery Method</h2>
+                            <div class="delivery-options">
+                                <label class="delivery-option">
+                                    <input type="radio" name="delivery" value="standard" checked>
+                                    <span class="option-content">
+                                        <span class="option-title">Standard Delivery</span>
+                                        <span class="option-desc">5-7 business days</span>
+                                    </span>
+                                    <span class="option-price">FREE</span>
+                                </label>
+                                <label class="delivery-option">
+                                    <input type="radio" name="delivery" value="express">
+                                    <span class="option-content">
+                                        <span class="option-title">Express Delivery</span>
+                                        <span class="option-desc">2-3 business days</span>
+                                    </span>
+                                    <span class="option-price">$50</span>
+                                </label>
+                                <label class="delivery-option">
+                                    <input type="radio" name="delivery" value="overnight">
+                                    <span class="option-content">
+                                        <span class="option-title">Overnight Delivery</span>
+                                        <span class="option-desc">1 business day</span>
+                                    </span>
+                                    <span class="option-price">$100</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-checkout">Proceed to Payment</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <div id="summaryItems"></div>
+                <div class="summary-divider"></div>
+
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="subtotalPrice">$0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Delivery:</span>
+                    <span id="deliveryPrice">FREE</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span id="totalPrice">$0</span>
+                </div>
+
+                <button class="btn-continue" onclick="window.location.href='products.html'">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Turning Pages is your go-to platform for discovering and purchasing books online.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="About.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@turningpages.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Turning Pages. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/checkout.js"></script>
+</body>
+</html>

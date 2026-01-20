@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/be1ba39dfe.js"></script>
+    <link rel="stylesheet" href="./css/login.css">
+    <title>Register - Turning Pages</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="logo">📚 Turning Pages</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-right" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="Register.html" class="login-link">Register</a></li>
+        </div>
+    </nav>
+
+    <div class="login-page">
+        <div class="form-container">
+            <div class="form-box">
+                <div class="login-header">
+                    <h3>CREATE ACCOUNT</h3>
+                    <p>Please enter your details to create an account.</p>
+                </div>
+                <form class="login-form" onsubmit="handleRegister(event)">
+                    <div class="form-group">
+                        <label for="reg-username">Username</label>
+                        <input type="text" id="reg-username" placeholder="Choose a username" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-email">Email</label>
+                        <input type="email" id="reg-email" placeholder="Enter your email" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-password">Password</label>
+                        <input type="password" id="reg-password" placeholder="Create a password" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-confirm">Confirm Password</label>
+                        <input type="password" id="reg-confirm" placeholder="Confirm your password" required/>
+                    </div>
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <div class="gender-options">
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="Female" required>
+                                Female
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="Male" required>
+                                Male
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="Other" required>
+                                Other
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-login">Create Account</button>
+                </form>
+                <p class="message">Already have an account? <a href="login.html">Login here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Turning Pages is your go-to platform for discovering and purchasing books online.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="About.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@turningpages.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Turning Pages. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./js/auth.js"></script>
+</body>
+</html>

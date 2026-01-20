@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/be1ba39dfe.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Turning Pages - Best Online Book Store</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="logo">📚 Turning Pages</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-right" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="login.html" class="login-link" id="authLink">Login</a></li>
+            <li><a href="#" class="cart-link" onclick="openCart(event)">
+                <i class="fa fa-shopping-cart"></i>
+                <span id="cartCount" class="cart-count">0</span>
+            </a></li>
+        </div>
+    </nav>
+
+    <div class="section-1">
+        <div class="Section-1-text">
+            <h1>Welcome to Turning Pages</h1>
+            <p>Discover your next favorite book from our extensive collection</p>
+            <a href="products.html" class="btn">Explore Books <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+    </div>
+    
+    <div class="section-2">
+        <h2>Featured Books</h2>
+        <div class="gallery" id="featuredBooks">
+            <!-- Dynamic content loaded by JS -->
+        </div>
+    </div>
+
+    <div class="section-3">
+        <h2>Why Choose Us?</h2>
+        <div class="features">
+            <div class="feature-card">
+                <i class="fa fa-shipping-fast"></i>
+                <h3>Fast Shipping</h3>
+                <p>Quick and reliable delivery to your doorstep</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa fa-lock"></i>
+                <h3>Secure Payment</h3>
+                <p>Safe and encrypted checkout process</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa fa-undo"></i>
+                <h3>Easy Returns</h3>
+                <p>30-day return policy on all books</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa fa-headphones"></i>
+                <h3>24/7 Support</h3>
+                <p>Round-the-clock customer service</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Turning Pages is your go-to platform for discovering and purchasing books online.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="About.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@turningpages.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Turning Pages. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Shopping Cart</h2>
+            <div id="cartItems"></div>
+            <div class="cart-summary">
+                <h3>Total: $<span id="cartTotal">0</span></h3>
+                <button class="btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+                <button class="btn-secondary" onclick="closeCart()">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/cart.js"></script> 
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/img_11.jpg" alt="Avatar">
+                <div class="container">
+                  <h4><b>John Doe</b></h4> 
+                  <p>Architect & Engineer</p> 
+                </div>
+            </div>
+
+        </div>
+
+    </div>  -->
+
+    <div class="section-4">
+        <h2>Featured Brands</h2>
+        <div class="brand">
+            <img src="images\Prabhat_pub.png" alt="">
+        </div>
+        <div class="brand">
+            <img src="images\ebh book.jpeg" alt="">
+        </div>
+        <div class="brand">
+            <img src="./images/book_logo3.png" alt="">
+        </div>
+        <div class="brand">
+            <img src="./images/book_logo_4.png" alt="">
+        </div>
+        <div class="brand">
+            <img src="./images/book_logo_5.png" alt="">
+        </div>
+    </div>
+
+    <!-- section-5 contact us  -->
+    <div class="section-5">
+        
+              <h2>Contact Us</h2>
+              <h3>leave us a message or suggestion:</h3>
+
+              <div class="column">
+                <form action="/index.html">
+                  <label for="fname">First Name</label>
+                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                  <label for="lname">Last Name</label>
+                  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                  <label for="country">Country</label>
+                  <select id="country" name="country">
+                    <option value="india">India</option>
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                  </select>
+                  <label for="subject">Subject</label>
+                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                  <input type="submit" value="Submit">
+                </form>
+              </div>
+
+    </div>
+</body>
+</html>
